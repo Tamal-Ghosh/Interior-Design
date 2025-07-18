@@ -1,7 +1,17 @@
-//for basic section billing
-// plus button
+/* ========================================
+   INTERIOR DESIGN PRICING CALCULATOR
+   Interactive JavaScript for Basic & Pro Packages
+======================================== */
+
+// ========================================
+// BASIC PACKAGE FUNCTIONALITY
+// ========================================
+
+// Basic package variables
 let costBasic = 199;
 let roomCount = 1;
+
+// Plus button for basic package
 let addBasic = document.querySelector("#addBasic");
 addBasic.onclick = () => {
     let bill = document.querySelector("#billBasic");
@@ -13,7 +23,7 @@ addBasic.onclick = () => {
     roomNum.innerText = `${roomCount} room`;
 }
 
-//minus button
+// Minus button for basic package
 let minusBasic = document.querySelector("#minusBasic");
 minusBasic.onclick = () => {
     let bill = document.querySelector("#billBasic");
@@ -26,11 +36,15 @@ minusBasic.onclick = () => {
     roomNum.innerText = `${roomCount} room`;
 }
 
+// ========================================
+// PRO PACKAGE FUNCTIONALITY
+// ========================================
 
-//for pro section billing
-// Plus button
+// Pro package variables
 let costPro = 249;
 let roomCountp = 1;
+
+// Plus button for pro package
 let addPro = document.querySelector("#addPro");
 addPro.onclick = () => {
     let bill = document.querySelector("#billPro");
@@ -42,8 +56,7 @@ addPro.onclick = () => {
     roomNum.innerText = `${roomCountp} room`;
 }
 
-//Minus button 
-
+// Minus button for pro package
 let minusPro = document.querySelector("#minusPro");
 minusPro.onclick = () => {
     let bill = document.querySelector("#billPro");
@@ -57,9 +70,11 @@ minusPro.onclick = () => {
     roomNum.innerText = `${roomCountp} room`;
 }
 
-//Thank you message after signup
-//for basic section
+// ========================================
+// SIGNUP FUNCTIONALITY & THANK YOU MESSAGES
+// ========================================
 
+// Thank you message for basic package signup
 let signupBasic = document.querySelector("#signupBasic");
 signupBasic.onclick = () => {
     console.log("hi")
@@ -67,8 +82,7 @@ signupBasic.onclick = () => {
     thanksBasic.innerText = `Thank you for choosing ${roomCount} room`;
 }
 
-//for pro section
-
+// Thank you message for pro package signup
 let signupPro = document.querySelector("#signupPro");
 signupPro.onclick = () => {
     console.log("hi");

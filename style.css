@@ -1,56 +1,121 @@
+/* ========================================
+   GLOBAL RESET & BASE STYLES
+======================================== */
 * {
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: border-box;
+    /* background-color: #201e43f3; */
 }
 
+/* ========================================
+   MAIN LAYOUT CONTAINERS
+======================================== */
 .body {
-    width: 100%;
+    min-width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
-
+    color: #ccc;
+    background-color: #201e43f3;
 }
 
 .main {
-    width: 74.5%;
+    width: 82.5%;
     height: inherit;
-    padding-top: 6.5%;
-    padding-left: 23%;
-    /* background-color: beige; */
-
+    padding-top: 2%;
+    padding-left: 15%;
+    /* background-color: #201e43f3; */
 }
 
-.sidemenu {
-    background-color: #f44336;
-    width: 18%;
+/* ========================================
+   NAVIGATION STYLES
+======================================== */
+nav {
+    background-color:#d33f34;
+    width: 10%;
     height: inherit;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     padding-top: 7%;
-    padding-left: 2%;
+    padding-left: 1%;
+    display: flex;
+    justify-content:left;
     position: fixed;
 }
 
-.company_name {
-    font-size: 80%;
+.link_container {
     font-weight: bold;
-    padding-bottom: 20%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;    
 }
 
-.section {
-    font-weight: bold;
-    font-size: 70%;
+nav a {
+    height: 5%;
+    /* width: 60%; */
+    padding: 0 10px;
+    display: flex;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color:wheat;
+    border-radius: 5%;
+    margin: 0px;
+    color: black;
 }
 
 .sec {
-    padding-top: 9%;
-    /* text-decoration: none; */
+    /* font-weight: bold; */
+    font-size: 70%;
+    width: 60%;
+    /* padding-top: 9%; */
+    color:rgb(240, 219, 191);
+    text-decoration: none;
+    font-size: 115%;
 }
 
-.interior {
-    font-size: 400%;
+/* ========================================
+   TYPOGRAPHY & BRANDING
+======================================== */
+.company_name {
+    font-size:150% ;
+    font-weight: bold;
+    color:#f44336;
+}
 
+/* .section {
+    font-weight: bold;
+    font-size: 70%;
+} */
+
+/* nav ul li{
+    text-decoration: none;
+    list-style-type: none;
+    text-align: left;
+    margin-left: -38px;
+    font-size: 100%;
+} */
+
+/* .cn{
+    font-size: 24px
+} */
+
+.interior {
+    font-size: 350%;
+}
+
+.segment {
+    font-size: 275%;
+    color: #f44336;
+    padding-bottom: 2%;
+}
+
+.head {
+    padding-bottom: 1.75%;
 }
 
 .bar {
@@ -62,20 +127,13 @@
     background-color: #f44336;
 }
 
-.head {
-    padding-bottom: 1.75%;
-}
-
-.segment {
-    font-size: 275%;
-    color: #f44336;
-    padding-bottom: 2%;
-}
-
+/* ========================================
+   PHOTO GALLERY SECTION
+======================================== */
 .photo {
-    position: relative;
+    position:relative ;
     width: 100%;
-    /* margin: 100px auto 50px; */
+    margin: 100px auto 50px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(49%, 1fr));
     grid-gap: 1%;
@@ -86,17 +144,24 @@
     width: 100%;
     cursor: pointer;
     opacity: .8;
+    /* z-index: -1; */
 }
 
 .photo img:hover {
     opacity: 1;
 }
 
+/* ========================================
+   SERVICE SECTION
+======================================== */
 .service {
     margin-bottom: 12%;
     font-size: 16px;
 }
 
+/* ========================================
+   DESIGNER SECTION
+======================================== */
 /* css for deginer section */
 .designer {
     height: inherit;
@@ -109,8 +174,6 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-
-
 }
 
 .person {
@@ -121,20 +184,26 @@
 .personi {
     opacity: .8;
     width: 100%;
-
 }
 
 .padding {
-
     font-size: 16px;
     padding: 5%;
 }
 
+/* ========================================
+   PACKAGES SECTION
+======================================== */
 /* css for packages section */
 .pack {
     width: 100%;
     height: inherit;
     margin-bottom: 12%;
+}
+
+.facility {
+    display: flex;
+    justify-content: space-between;
 }
 
 .list_basic,
@@ -158,7 +227,10 @@
     font-size: 200%;
     color: white;
     background-color: #616161;
+}
 
+.pro {
+    background-color: #f44336;
 }
 
 .cost button,
@@ -182,32 +254,24 @@
 
 .signup button {
     font-size: medium;
-    background-color: rgb(255, 255, 255);
-    border: 10px solid rgb(255, 255, 255);
+    background-color: rgb(214, 63, 63);
+    border: 10px solid rgb(214, 63, 63);
     border-radius: 5%;
 }
 
 .signup button:hover {
-
-    background-color: rgb(0, 0, 0);
-    border: 10px solid rgb(0, 0, 0);
+    background-color: #616161;
+    border: 10px solid #616161;
     color: white;
 }
 
-.pro {
-    background-color: #f44336;
-}
-
-.facility {
-    display: flex;
-    justify-content: space-between;
-}
-
+/* ========================================
+   CONTACT SECTION
+======================================== */
 /* css for contact */
 .contact {
     width: 95%;
     padding: 5%;
-
 }
 
 input,
@@ -215,6 +279,7 @@ input,
     margin-bottom: 16px;
     width: 100%;
     height: 40px;
+    background-color: rgb(220, 219, 219);
 }
 
 .submit {
@@ -228,12 +293,88 @@ input,
     color: black;
 }
 
+/* ========================================
+   GENERAL STYLES
+======================================== */
 /* .thanks
 {
     visibility: hidden;
 } */
+
 /* a {
     text-decoration: none;
     color: white;
-
 } */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav .home-link {
+    margin-right:auto ;
+}
+
+nav svg {
+    fill:#ccc;
+}
+/* ========================================
+   SIDEBAR MOBILE MENU
+======================================== */
+#sidebar {
+    display: none;
+}
+
+.close-sidebar , .open-sidebar {
+    padding: 0 20px;
+    display: none;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE
+======================================== */
+@media(max-width:450px){
+    .link_container{
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top:0;
+        left: -100%;
+        z-index: 10;
+        width: 300px;
+        background-color:#f44336 ;
+        box-shadow: -5px 0 5px rgba(0,0,0,.25) ;
+        transition: .75s ease-out;
+    }
+    
+    nav{
+        position: unset;
+        padding-top:5%;
+        margin: 0%;
+        background-color:#201e4300;
+        padding-left: -5%;
+        width: 5%;
+    }
+    
+    .main{
+        width: 80%;
+        padding-left: 5%;
+        padding-right: 4%;
+    }
+    
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+    
+    .close-sidebar , .open-sidebar{
+        display: block;
+    }
+    
+    #sidebar:checked ~ .link_container{
+        left: 0;
+    }
+}
